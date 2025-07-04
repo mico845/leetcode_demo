@@ -16,9 +16,14 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+file(GLOB TEST_SRC
+  test/test1.cpp
+  test/test2.cpp
+)
+
 add_executable(
   ${PROJECT_NAME}
-  main.cc
+  ${TEST_SRC}
 )
 target_link_libraries(
   ${PROJECT_NAME}
